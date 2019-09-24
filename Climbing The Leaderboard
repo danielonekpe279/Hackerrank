@@ -1,0 +1,33 @@
+    static int[] climbingLeaderboard(int[] scores, int[] alice) {
+        int pos = 0; 
+        int[] position = new int [alice.length]; 
+
+        for(int i = 0; i < alice.length; i++)
+        {
+            for(int j = 0; j < scores.length; j++)
+            {
+                if(alice[i]<scores[j])
+                {
+                    if(j != 0)
+                    {
+                        if(scores[j-1]!=scores[j])
+                        {
+                        pos++;
+                        }
+                    }
+                    else
+                    {
+                        pos++;
+                    }
+                }
+
+                else
+                {
+                    break;
+                }
+            }
+            position[i] = pos+1;
+            pos = 0;
+        }
+    return position;
+    }
