@@ -1,0 +1,13 @@
+// Complete the extraLongFactorials function below.
+//Problem: https://www.hackerrank.com/challenges/extra-long-factorials/problem
+//Due to the size of the factorials bigintegers where used
+static void extraLongFactorials(int n) {
+  BigInteger value = new BigInteger ("1");
+
+   while(n>0)
+     {
+       value = value.multiply(BigInteger.valueOf(n))
+       n--;
+     }
+        System.out.println(value);
+ }
